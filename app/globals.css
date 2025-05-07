@@ -1,7 +1,6 @@
 /* Usando @import en lugar de @tailwind */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/* @import "tailwindcss/base"; */
+@import "tailwindcss";
 
 /* Variables CSS para shadcn/ui */
 :root {

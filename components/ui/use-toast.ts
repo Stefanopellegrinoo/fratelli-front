@@ -5,7 +5,7 @@ import type React from "react"
 // Reemplaza el archivo existente con este
 import { useState } from "react"
 
-const TOAST_LIMIT = 5
+// const TOAST_LIMIT = 5
 const TOAST_REMOVE_DELAY = 5000
 
 type ToasterToast = {
@@ -16,12 +16,12 @@ type ToasterToast = {
   variant?: "default" | "destructive"
 }
 
-const actionTypes = {
-  ADD_TOAST: "ADD_TOAST",
-  UPDATE_TOAST: "UPDATE_TOAST",
-  DISMISS_TOAST: "DISMISS_TOAST",
-  REMOVE_TOAST: "REMOVE_TOAST",
-} as const
+// const actionTypes = {
+//   ADD_TOAST: "ADD_TOAST",
+//   UPDATE_TOAST: "UPDATE_TOAST",
+//   DISMISS_TOAST: "DISMISS_TOAST",
+//   REMOVE_TOAST: "REMOVE_TOAST",
+// } as const
 
 let count = 0
 

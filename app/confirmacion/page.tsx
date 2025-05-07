@@ -1,15 +1,15 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { CheckCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { formatPrice } from "@/lib/utils"
 import "../../styles/globals.css"
+
 export default function ConfirmacionPage() {
   const router = useRouter()
-  const searchParams = useSearchParams()
   const [orderData, setOrderData] = useState(null)
 
   useEffect(() => {

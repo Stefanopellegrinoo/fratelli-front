@@ -21,7 +21,7 @@ export function ProductCatalog() {
     { id: "panzottis", name: "Panzottis" },
     { id: "sorrentinos", name: "Sorrentinos" },
   ]
-  const fetchProducts = async (category) => {
+  const fetchProducts = async () => {
     try {
       setLoading(true)
       setError(null)
@@ -39,14 +39,16 @@ export function ProductCatalog() {
   }
 
   useEffect(() => {
-    fetchProducts(selectedCategory)
-  }, [selectedCategory])
+    fetchProducts()
+  }, [])
 
   const filteredProducts =
     selectedCategory === "todos" ? products : products.filter((product) => product.category === selectedCategory)
 
   return (
     <div>
+            {loading && <p>cargando ... </p>}
+            {error && <p>error ... </p>}
       <div className="flex flex-wrap gap-2 mb-6">
         {categories.map((category) => (
           <Button
